@@ -1,5 +1,7 @@
 package com.example.btctqc_app.services.models;
 
+import androidx.annotation.NonNull;
+
 public class ConditionModel {
     int condition_id;
     String name;
@@ -28,4 +30,10 @@ public class ConditionModel {
     public void setCreate_time_stamp(String create_time_stamp) {
         this.create_time_stamp = create_time_stamp;
     }
+    @NonNull
+    @Override
+    public String toString() {
+        return name;
+    }
+
 }

@@ -32,6 +32,12 @@ android {
         debug{
             buildConfigField "String", 'BASE_URL', "\"http://192.168.195.99:8080/btctqc-api/api.php\""
         }
+        home{
+            initWith debug
+            // special url for user end point
+            buildConfigField "String", 'BASE_URL', "\"http://192.168.43.214/btctqc-api/api.php\""
+
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'

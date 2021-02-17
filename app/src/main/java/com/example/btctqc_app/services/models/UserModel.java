@@ -1,5 +1,7 @@
 package com.example.btctqc_app.services.models;
 
+import androidx.annotation.NonNull;
+
 public class UserModel {
 
     String username;
@@ -47,4 +49,5 @@ public class UserModel {
     public void setCreate_time_stamp(String create_time_stamp) {
         this.create_time_stamp = create_time_stamp;
     }
+
 }
