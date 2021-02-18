@@ -11,14 +11,14 @@ import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
 @EViewGroup(R.layout.item_response)
-public class ResponseItemView extends RelativeLayout {
+public class SurveyItemView extends RelativeLayout {
 
     @ViewById(R.id.id)
     TextView id;
     @ViewById(R.id.condition)
     TextView title;
 
-    public ResponseItemView(Context context) {
+    public SurveyItemView(Context context) {
         super(context);
     }
 

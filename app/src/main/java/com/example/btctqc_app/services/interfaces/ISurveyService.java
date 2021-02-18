@@ -19,4 +19,8 @@ public interface ISurveyService {
     @Get("/records/view_surveys?filter=survey_id,eq,{surveyID}")
         //@RequiresCookie(Constants.SESSION_NAME)
     JsonArrayHolder<SurveyModel> getAll(@Path int surveyID);
+
+    @Post("/records/surveys?exclude=survey_id,create_time_stamp")
+        //@RequiresCookie(Constants.SESSION_NAME)
+    Integer addNew(@Body SurveyModel model);
 }

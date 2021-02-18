@@ -33,6 +33,7 @@ import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Extra;
 import org.androidannotations.annotations.ItemSelect;
 import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
@@ -68,6 +69,8 @@ public class ConditionUpdateActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     @Bean
     ResponseListAdapter adapter;
+    @Extra
+    int surveyID;
 
     private List<ConditionModel> conditionModels;
     private int selectedConditionID;
@@ -83,8 +86,8 @@ public class ConditionUpdateActivity extends AppCompatActivity {
     @Background(serial = "init")
     void loadSurveyDetail() {
         try{
-            //Todo: change surveyID
-            SurveyModel surveyModel = surveyService.getAll(1).getSingleRecord();
+
+            SurveyModel surveyModel = surveyService.getAll(surveyID).getSingleRecord();
             loadSurveyDetailSuccess(surveyModel);
         }catch (RestClientException e){
             showError(e.getMessage());
@@ -129,8 +132,8 @@ public class ConditionUpdateActivity extends AppCompatActivity {
     @Background
     void loadResponses(){
         try{
-            //Todo: change the survey id
-            responseModels = responseService.getAll(1).getRecords();
+
+            responseModels = responseService.getAll(surveyID).getRecords();
             loadResponsesSuccess(responseModels);
         }catch (RestClientException e){
             showError(e.getMessage());
@@ -172,7 +175,7 @@ public class ConditionUpdateActivity extends AppCompatActivity {
     @Click(R.id.add)
     void onAdd(){
         ResponseModel responseModel = new ResponseModel();
-        responseModel.setSurvey_id(1);
+        responseModel.setSurvey_id(surveyID);
         responseModel.setCondition_id(selectedConditionID);
         addNewResponse(responseModel);
     }
@@ -187,7 +190,7 @@ public class ConditionUpdateActivity extends AppCompatActivity {
     }
     @Click(R.id.finish)
     void onFinish(){
-        //Todo: procede to last view form (detail)
+
         setResult(Activity.RESULT_OK);
         finish();
     }

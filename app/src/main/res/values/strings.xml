@@ -2,8 +2,8 @@
     <string name="app_name">Bus Transit Contact Tracing App</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="dashboard_fragment_label">First Fragment</string>
+    <string name="history_fragment_label">Histories</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
@@ -12,7 +12,7 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in">LOG-IN</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
@@ -28,4 +28,7 @@
     -->
     <string name="hello_world">Hello Square World!</string>
     <string name="condition_title">SYMPTOMPS YOU ARE CURRENTLY EXPERIENCING:</string>
+    <string name="no_account">No account yet? Click here to register!</string>
+    <string name="action_logout">Log out</string>
+    <string name="back">Back</string>
 </resources>

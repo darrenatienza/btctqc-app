@@ -24,8 +24,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.btctqc_app.R;
+import com.example.btctqc_app.misc.MyPrefs;
+import com.example.btctqc_app.misc.MyPrefs_;
 import com.example.btctqc_app.services.interfaces.AuthService;
 import com.example.btctqc_app.services.models.LoginModel;
+import com.example.btctqc_app.services.models.UserModel;
 import com.example.btctqc_app.ui.login.LoginViewModel;
 import com.example.btctqc_app.ui.login.LoginViewModelFactory;
 
@@ -34,6 +37,7 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
+import org.androidannotations.annotations.sharedpreferences.Pref;
 import org.androidannotations.rest.spring.annotations.RestService;
 import org.springframework.web.client.RestClientException;
 
@@ -52,6 +56,9 @@ public class LoginActivity extends AppCompatActivity {
 
     @RestService
     AuthService authService;
+
+    @Pref
+    MyPrefs_ myPrefs;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -117,15 +124,18 @@ public class LoginActivity extends AppCompatActivity {
             LoginModel loginModel = new LoginModel();
             loginModel.setPassword(passwordEditText.getText().toString());
             loginModel.setUsername(usernameEditText.getText().toString());
-            onLoginSuccess();
+            UserModel currentUser = authService.login(loginModel);
+            onLoginSuccess(currentUser);
         }catch (RestClientException ex){
             showLoginFailed(R.string.login_failed);
         }
     }
     @UiThread
-    void onLoginSuccess(){
+    void onLoginSuccess(UserModel userModel){
         loadingProgressBar.setVisibility(View.GONE);
-        Log.d("login", "success");
+        myPrefs.currentUserID().put(userModel.getUser_id());
+        myPrefs.currentUserName().put(userModel.getUsername());
+        Log.d("login", "success for user " + myPrefs.currentUserName().get());
         setResult(Activity.RESULT_OK);
         //Complete and destroy login activity once successful
         finish();
@@ -134,6 +144,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @UiThread
     void showLoginFailed(@StringRes Integer errorString) {
+        loadingProgressBar.setVisibility(View.GONE);
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
     }
 }

@@ -12,7 +12,8 @@ public class JsonArrayHolder<T> {
 
     public T getSingleRecord(){
 
-            return records.get(0);
+
+            return records.size() > 0? records.get(0) : null;
 
 
     }

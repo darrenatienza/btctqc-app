@@ -7,10 +7,29 @@ public class SurveyModel {
     String first_name;
     String middle_name;
     String last_name;
+    int bus_info_id;
+    int user_id;
+
     String bus_code;
     String bus_name;
     String contact_number;
     String create_time_stamp;
+
+    public int getBus_info_id() {
+        return bus_info_id;
+    }
+
+    public void setBus_info_id(int bus_info_id) {
+        this.bus_info_id = bus_info_id;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
 
     public String getContact_number() {
         return contact_number;
