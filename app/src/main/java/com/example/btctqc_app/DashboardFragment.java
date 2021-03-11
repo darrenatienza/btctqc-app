@@ -1,6 +1,7 @@
 package com.example.btctqc_app;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -52,8 +53,11 @@ public class DashboardFragment extends Fragment {
 
     private void initAccountSettingClick(View view) {
         view.findViewById(R.id.account_setting).setOnClickListener(view1 -> {
-            NavHostFragment.findNavController(DashboardFragment.this)
-                    .navigate(R.id.action_DashboardFragment_to_HistoryFragment);
+           /** NavHostFragment.findNavController(DashboardFragment.this)
+                    .navigate(R.id.action_DashboardFragment_to_HistoryFragment); */
+            Uri uri = Uri.parse(BuildConfig.WEB_URL); // missing 'http://' will cause crashed
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
         });
     }
 
@@ -65,9 +69,13 @@ public class DashboardFragment extends Fragment {
 
     private void initHistoryClick(View view) {
         view.findViewById(R.id.history).setOnClickListener(view1 -> {
-            NavHostFragment.findNavController(DashboardFragment.this)
-                    .navigate(R.id.action_DashboardFragment_to_HistoryFragment);
+            /**NavHostFragment.findNavController(DashboardFragment.this)
+                    .navigate(R.id.action_DashboardFragment_to_HistoryFragment);*/
+            Uri uri = Uri.parse(BuildConfig.WEB_URL); // missing 'http://' will cause crashed
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
         });
+
     }
 
 

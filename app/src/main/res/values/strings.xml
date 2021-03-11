@@ -31,4 +31,5 @@
     <string name="no_account">No account yet? Click here to register!</string>
     <string name="action_logout">Log out</string>
     <string name="back">Back</string>
+    <string name="prompt_username">User Name</string>
 </resources>

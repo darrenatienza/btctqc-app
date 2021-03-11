@@ -31,11 +31,18 @@ android {
     buildTypes {
         debug{
             buildConfigField "String", 'BASE_URL', "\"http://192.168.195.99:8080/btctqc-api/api.php\""
+            buildConfigField "String", 'WEB_URL', "\"http://192.168.195.99:3000\""
         }
         home{
             initWith debug
             // special url for user end point
             buildConfigField "String", 'BASE_URL', "\"http://192.168.43.214/btctqc-api/api.php\""
+            buildConfigField "String", 'WEB_URL', "\"http://192.168.43.214:3000\""
+        }
+        home_wifi{
+            initWith debug
+            // special url for user end point
+            buildConfigField "String", 'BASE_URL', "\"http://192.168.1.100/btctqc-api/api.php\""
 
         }
         release {
