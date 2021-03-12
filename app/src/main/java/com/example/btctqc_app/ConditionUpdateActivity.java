@@ -194,6 +194,7 @@ public class ConditionUpdateActivity extends AppCompatActivity {
         setResult(Activity.RESULT_OK);
         finish();
     }
+    //todo: add delete on condition
 
 
 }

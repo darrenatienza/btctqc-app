@@ -55,7 +55,7 @@ public class DashboardFragment extends Fragment {
         view.findViewById(R.id.account_setting).setOnClickListener(view1 -> {
            /** NavHostFragment.findNavController(DashboardFragment.this)
                     .navigate(R.id.action_DashboardFragment_to_HistoryFragment); */
-            Uri uri = Uri.parse(BuildConfig.WEB_URL); // missing 'http://' will cause crashed
+            Uri uri = Uri.parse(BuildConfig.IP+BuildConfig.WEB_PORT); // missing 'http://' will cause crashed
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
         });
@@ -71,7 +71,7 @@ public class DashboardFragment extends Fragment {
         view.findViewById(R.id.history).setOnClickListener(view1 -> {
             /**NavHostFragment.findNavController(DashboardFragment.this)
                     .navigate(R.id.action_DashboardFragment_to_HistoryFragment);*/
-            Uri uri = Uri.parse(BuildConfig.WEB_URL); // missing 'http://' will cause crashed
+            Uri uri = Uri.parse(BuildConfig.IP+BuildConfig.WEB_PORT); // missing 'http://' will cause crashed
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
         });
