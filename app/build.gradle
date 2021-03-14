@@ -16,7 +16,7 @@ dependencies {
 }
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.example.btctqc_app"
@@ -46,10 +46,12 @@ android {
             buildConfigField "String", 'BASE_URL', "\"/btctqc-api/api.php\""
             buildConfigField "String", 'WEB_PORT', "\":3000\""
         }
-        home_wifi{
+        home_desktop_wifi{
             initWith debug
             // special url for user end point
-            buildConfigField "String", 'BASE_URL', "\"http://192.168.1.100/btctqc-api/api.php\""
+            buildConfigField "String", 'IP', "\"http://192.168.1.100\""
+            buildConfigField "String", 'BASE_URL', "\"/btctqc-api/api.php\""
+            buildConfigField "String", 'WEB_PORT', "\":3000\""
 
         }
         release {
