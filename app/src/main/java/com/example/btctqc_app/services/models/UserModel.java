@@ -2,6 +2,9 @@ package com.example.btctqc_app.services.models;
 
 import androidx.annotation.NonNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class UserModel {
 
     int user_id;

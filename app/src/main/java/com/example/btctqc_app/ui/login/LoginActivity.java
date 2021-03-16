@@ -5,6 +5,8 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -23,6 +25,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.btctqc_app.BuildConfig;
 import com.example.btctqc_app.R;
 import com.example.btctqc_app.misc.MyPrefs;
 import com.example.btctqc_app.misc.MyPrefs_;
@@ -113,6 +116,12 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
+    @Click(R.id.register)
+    void onRegister(){
+        Uri uri = Uri.parse(BuildConfig.IP+BuildConfig.WEB_PORT+"/register"); // missing 'http://' will cause crashed
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
     @Click(R.id.login)
     void onClickLogin(){
         loadingProgressBar.setVisibility(View.VISIBLE);
@@ -127,6 +136,7 @@ public class LoginActivity extends AppCompatActivity {
             UserModel currentUser = authService.login(loginModel);
             onLoginSuccess(currentUser);
         }catch (RestClientException ex){
+            Log.e("Login error",ex.toString());
             showLoginFailed(R.string.login_failed);
         }
     }

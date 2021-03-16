@@ -28,7 +28,7 @@
     -->
     <string name="hello_world">Hello Square World!</string>
     <string name="condition_title">SYMPTOMPS YOU ARE CURRENTLY EXPERIENCING:</string>
-    <string name="no_account">No account yet? Click here to register!</string>
+    <string name="no_account">No Account? Register Here!</string>
     <string name="action_logout">Log out</string>
     <string name="back">Back</string>
     <string name="prompt_username">User Name</string>

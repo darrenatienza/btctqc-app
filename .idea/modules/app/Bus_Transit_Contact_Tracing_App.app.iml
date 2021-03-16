@@ -10,39 +10,38 @@
     </facet>
     <facet type="android" name="Android">
       <configuration>
-        <option name="SELECTED_BUILD_VARIANT" value="home_desktop_wifi" />
-        <option name="ASSEMBLE_TASK_NAME" value="assembleHome_desktop_wifi" />
-        <option name="COMPILE_JAVA_TASK_NAME" value="compileHome_desktop_wifiSources" />
+        <option name="SELECTED_BUILD_VARIANT" value="bsu_desktop_lan" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleBsu_desktop_lan" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileBsu_desktop_lanSources" />
         <afterSyncTasks>
-          <task>generateHome_desktop_wifiSources</task>
+          <task>generateBsu_desktop_lanSources</task>
         </afterSyncTasks>
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
         <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
-        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/main/res;file://$MODULE_DIR$/../../../app/src/home_desktop_wifi/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/home_desktop_wifi;file://$MODULE_DIR$/../../../app/build/generated/res/resValues/home_desktop_wifi" />
-        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/androidTest/res;file://$MODULE_DIR$/../../../app/src/androidTestHome_desktop_wifi/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/main/res;file://$MODULE_DIR$/../../../app/src/bsu_desktop_lan/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/bsu_desktop_lan;file://$MODULE_DIR$/../../../app/build/generated/res/resValues/bsu_desktop_lan" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/androidTest/res;file://$MODULE_DIR$/../../../app/src/androidTestBsu_desktop_lan/res" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/home_desktop_wifi/classes" />
-    <output-test url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/home_desktop_wifiUnitTest/classes" />
+    <output url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/bsu_desktop_lan/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/bsu_desktop_lanUnitTest/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../app">
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/androidTest/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/res" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/home_desktop_wifi/out" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/buildConfig/home_desktop_wifi" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/res/resValues/home_desktop_wifi" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/bsu_desktop_lan/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/buildConfig/bsu_desktop_lan" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/res/resValues/bsu_desktop_lan" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/../../../app/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../app/build" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 30 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: com.google.android.wearable:wearable:2.6.0" level="project" />
     <orderEntry type="library" name="Gradle: org.androidannotations:androidannotations-api:4.8.0" level="project" />
     <orderEntry type="library" name="Gradle: org.androidannotations:rest-spring-api:4.8.0" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.11.3" level="project" />
@@ -61,6 +60,7 @@
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.50" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.zxing:core:3.3.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.wearable:wearable:2.6.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.wear:wear:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.navigation:navigation-ui:2.3.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.material:material:1.2.1@aar" level="project" />

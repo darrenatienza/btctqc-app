@@ -39,6 +39,14 @@ android {
             buildConfigField "String", 'BASE_URL', "\"http://192.168.43.214/btctqc-api/api.php\""
             buildConfigField "String", 'WEB_URL', "\"http://192.168.43.214:3000\""
         }
+        bsu_desktop_lan{
+            initWith debug
+            // special url for user end point
+            buildConfigField "String", 'IP', "\"http://192.168.195.99\""
+            buildConfigField "String", 'API_PORT', "\":8080\""
+            buildConfigField "String", 'BASE_URL', "\"/btctqc-api/api.php\""
+            buildConfigField "String", 'WEB_PORT', "\":3000\""
+        }
         my_laptop_bsu_wifi{
             initWith debug
             // special url for user end point
