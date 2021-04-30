@@ -32,4 +32,6 @@
     <string name="action_logout">Log out</string>
     <string name="back">Back</string>
     <string name="prompt_username">User Name</string>
+    <string name="start_route">Start Route</string>
+    <string name="destination_route">Destination Route</string>
 </resources>

@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -65,6 +66,10 @@ public class ConditionUpdateActivity extends AppCompatActivity {
     @ViewById(R.id.date)
     TextView date;
 
+    @ViewById(R.id.start_route)
+    EditText startRoute;
+    @ViewById(R.id.destination_route)
+    EditText destinationRoute;
     @ViewById
     RecyclerView recyclerView;
     @Bean
@@ -188,11 +193,27 @@ public class ConditionUpdateActivity extends AppCompatActivity {
             showError(ex.getMessage());
         }
     }
-    @Click(R.id.finish)
-    void onFinish(){
-
+    @Background
+    void updateSurveyRoute(SurveyModel surveyModel) {
+        try {
+            surveyService.edit(surveyID,surveyModel);
+           closeSurveyForm();
+        }catch(RestClientException ex){
+            showError(ex.getMessage());
+        }
+    }
+    @UiThread
+    void closeSurveyForm() {
         setResult(Activity.RESULT_OK);
         finish();
+    }
+
+    @Click(R.id.finish)
+    void onFinish(){
+        SurveyModel surveyModel = new SurveyModel();
+        surveyModel.setDestination_route(destinationRoute.getText().toString());
+        surveyModel.setStart_route(startRoute.getText().toString());
+        updateSurveyRoute(surveyModel);
     }
     //todo: add delete on condition
 

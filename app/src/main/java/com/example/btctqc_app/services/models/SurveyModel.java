@@ -15,6 +15,25 @@ public class SurveyModel {
     String contact_number;
     String create_time_stamp;
 
+    String start_route;
+    String destination_route;
+
+    public String getStart_route() {
+        return start_route;
+    }
+
+    public void setStart_route(String start_route) {
+        this.start_route = start_route;
+    }
+
+    public String getDestination_route() {
+        return destination_route;
+    }
+
+    public void setDestination_route(String destination_route) {
+        this.destination_route = destination_route;
+    }
+
     public int getBus_info_id() {
         return bus_info_id;
     }

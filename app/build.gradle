@@ -15,6 +15,14 @@ dependencies {
 
 }
 android {
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\darre\\Desktop\\jksfiles\\btctqc_ks.jks')
+            storePassword 'btctqc'
+            keyAlias 'key()'
+            keyPassword 'btctqc'
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
@@ -65,6 +73,11 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", 'IP', "\"http://www.bustrans.online\""
+            buildConfigField "String", 'API_PORT', "\":80\""
+            buildConfigField "String", 'BASE_URL', "\"/api/api.php\""
+            buildConfigField "String", 'WEB_PORT', "\":80\""
+
         }
     }
     compileOptions {
