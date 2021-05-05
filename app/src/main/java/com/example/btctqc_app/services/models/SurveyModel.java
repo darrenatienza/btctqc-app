@@ -9,6 +9,15 @@ public class SurveyModel {
     String last_name;
     int bus_info_id;
     int user_id;
+    double temperature;
+
+    public double getTemperature() {
+        return temperature;
+    }
+
+    public void setTemperature(double temperature) {
+        this.temperature = temperature;
+    }
 
     String bus_code;
     String bus_name;

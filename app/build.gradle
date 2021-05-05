@@ -47,6 +47,14 @@ android {
             buildConfigField "String", 'BASE_URL', "\"http://192.168.43.214/btctqc-api/api.php\""
             buildConfigField "String", 'WEB_URL', "\"http://192.168.43.214:3000\""
         }
+        staging{
+            initWith debug
+            // special url for user end point
+            buildConfigField "String", 'IP', "\"http://www.bustrans.online\""
+            buildConfigField "String", 'API_PORT', "\"\""
+            buildConfigField "String", 'BASE_URL', "\"/api/api.php\""
+            buildConfigField "String", 'WEB_PORT', "\"\""
+        }
         bsu_desktop_lan{
             initWith debug
             // special url for user end point

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bus Transit Contact Tracing App</string>
+    <string name="app_name">Bus Transport Contact Tracing App</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="dashboard_fragment_label">First Fragment</string>
@@ -34,4 +34,5 @@
     <string name="prompt_username">User Name</string>
     <string name="start_route">Start Route</string>
     <string name="destination_route">Destination Route</string>
+    <string name="temp">Temperature</string>
 </resources>

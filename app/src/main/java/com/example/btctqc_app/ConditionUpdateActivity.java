@@ -65,7 +65,8 @@ public class ConditionUpdateActivity extends AppCompatActivity {
     TextView contact;
     @ViewById(R.id.date)
     TextView date;
-
+    @ViewById(R.id.temp_t)
+    EditText temp;
     @ViewById(R.id.start_route)
     EditText startRoute;
     @ViewById(R.id.destination_route)
@@ -213,6 +214,7 @@ public class ConditionUpdateActivity extends AppCompatActivity {
         SurveyModel surveyModel = new SurveyModel();
         surveyModel.setDestination_route(destinationRoute.getText().toString());
         surveyModel.setStart_route(startRoute.getText().toString());
+        surveyModel.setTemperature(Double.parseDouble(temp.getText().toString()));
         updateSurveyRoute(surveyModel);
     }
     //todo: add delete on condition

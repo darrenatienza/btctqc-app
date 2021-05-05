@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
             SurveyModel surveyModel = new SurveyModel();
             surveyModel.setUser_id(currentUserID);
             surveyModel.setBus_info_id(busInfoID);
+            surveyModel.setTemperature(0.0);
             int surveyID = surveyService.addNew(surveyModel);
             addNewSurveySuccess(surveyID);
         }catch (RestClientException ex){
